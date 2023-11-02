@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação do Evento</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #header img {
+            max-width: 10%;
+            height: auto;
+        }
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="expoteclogo.jpeg" alt="ExpoTec Logo">
+    </div>
+    <h1>Formulário de inscrição</h1>
+
+    <form>
+
+        <label for="matricula">Matrícula:</label>
+
+        <input type="text" id="matricula" name="matricula" required>
+
+
+        <label for="projeto">Nome do Projeto:</label>
+
+        <input type="text" id="projeto" name="projeto" required>
+
+
+        <label for="area">Área de Atuação:</label>
+
+        <select name="area" id="area" required>
+
+            <option value="" disabled selected hidden>Selecione uma opção</option>
+
+            <option value="engenharia">Engenharia</option>
+
+            <option value="gestao">Gestão</option>
+
+            <option value="informatica">Informática</option>
+
+        </select>
+
+
+        <input type="submit" value="Inscrever-se">
+        <script>
+            // Seleciona o formulário pelo id
+            var form = document.getElementById("form");
+        
+            // Adiciona um listener para o evento de submit
+            form.addEventListener("submit", function(event) {
+                // Previne o comportamento padrão do formulário (enviar os dados)
+                event.preventDefault();
+        
+                // Seleciona os inputs pelo id
+                var matricula = document.getElementById("matricula");
+                var projeto = document.getElementById("projeto");
+                var area = document.getElementById("area");
+                console.log(matricula)
+                // Cria uma mensagem com os valores dos inputs
+                var mensagem = "Você se inscreveu com sucesso no evento de inovação!\n";
+                mensagem += "Sua matrícula é: " + matricula.value + "\n";
+                mensagem += "Seu projeto é: " + projeto.value + "\n";
+                mensagem += "Sua área de atuação é: " + area.value + "\n";
+        
+                // Mostra a mensagem em um alerta
+                alert(mensagem);
+            });
+        </script>
+    </form>
+    
+  
+<h1>Programação da Expotec 2023</h1>
+     <table>
+        <tr>
+            <th>Data</th>
+            <th>Evento</th>
+            <th>Local</th>
+            <th>Hora</th>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Abertura e Credenciamento</td>
+            <td>Auditório</td>
+            <td>08:00 - 09:30</td>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Apresentação Musical</td>
+            <td>Espaço Cultural</td>
+            <td>09:30 - 10:30</td>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Salas Temáticas</td>
+            <td>2° Piso Prédio Central</td>
+            <td>09:30 - 12:00</td>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Oficina de Desenho</td>
+            <td>3° Piso Prédio Central</td>
+            <td>10:30 - 12:00</td>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Salas Temáticas</td>
+            <td>2° Piso Prédio Central</td>
+            <td>14:00 - 18:00</td>
+        </tr>
+        <tr>
+            <td>20 de Novembro</td>
+            <td>Apresentação Musical</td>
+            <td>Espaço Cultural</td>
+            <td>15:30 - 16:30</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Salas Temáticas</td>
+            <td>2° Piso Prédio Central</td>
+            <td>08:00 - 12:00</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Apresentação</td>
+            <td>Auditório</td>
+            <td>08:45 -  11:15</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Exposição de Trabalhos</td>
+            <td>Piso Térreo Prédio Central</td>
+            <td>09:30 - 12:00</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Oficina de Desenho</td>
+            <td>3º Piso Prédio Central</td>
+            <td>10:30 - 12:00</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Artesanato Utilizando Materiais Minerais</td>
+            <td>2º Piso Prédio Anexo</td>
+            <td>10:30 - 12:00</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Palestra: Energia Solar e Sustentabilidade</td>
+            <td>Auditório</td>
+            <td>14:00 - 14:45</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Salas Temáticas</td>
+            <td>2º Piso Prédio Central</td>
+            <td>14:00 - 18:00</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Palestra: Potencial da Região Seridó para empreendimentos em Energias Renováveis</td>
+            <td>Auditório</td>
+            <td>14:45 - 15:30</td>
+        </tr>
+        <tr>
+            <td>21 de Novembro</td>
+            <td>Apresentação Musica/Teatro/Dança</td>
+            <td>Auditório</td>
+            <td>15:30 - 18:00</td>
+        </tr>
+    </table>
+   
+</body>
+</html>
